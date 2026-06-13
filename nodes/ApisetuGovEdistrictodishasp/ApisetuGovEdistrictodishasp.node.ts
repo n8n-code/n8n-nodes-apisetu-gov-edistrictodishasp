@@ -2,32 +2,32 @@ import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from '
 import { apIsDescription } from './resources/ap-is';
 
 export class ApisetuGovEdistrictodishasp implements INodeType {
-	description: INodeTypeDescription = {
-		displayName: 'Apisetu Gov Edistrictodishasp',
-		name: 'N8nDevApisetuGovEdistrictodishasp',
-		icon: { light: 'file:./apisetu-gov-edistrictodishasp.svg', dark: 'file:./apisetu-gov-edistrictodishasp.dark.svg' },
-		group: ['input'],
-		version: 1,
-		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: 'APIs from eDistrict Odisha ServicePlus platform.',
-		defaults: { name: 'Apisetu Gov Edistrictodishasp' },
-		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
-		credentials: [
-			{
-				name: 'N8nDevApisetuGovEdistrictodishaspApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: '={{\$credentials.url}}',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+        description: INodeTypeDescription = {
+                displayName: 'Apisetu Gov Edistrictodishasp',
+                name: 'N8nDevApisetuGovEdistrictodishasp',
+                icon: { light: 'file:./apisetu-gov-edistrictodishasp.svg', dark: 'file:./apisetu-gov-edistrictodishasp.dark.svg' },
+                group: ['input'],
+                version: 1,
+                subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
+                description: 'APIs from eDistrict Odisha ServicePlus platform.',
+                defaults: { name: 'Apisetu Gov Edistrictodishasp' },
+                usableAsTool: true,
+                inputs: [NodeConnectionTypes.Main],
+                outputs: [NodeConnectionTypes.Main],
+                credentials: [
+                        {
+                                name: 'N8nDevApisetuGovEdistrictodishaspApi',
+                                required: true,
+                        },
+                ],
+                requestDefaults: {
+                        baseURL: '={{\$credentials.url}}',
+                        headers: {
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                        },
+                },
+                properties: [
 		{
 			"displayName": "Resource",
 			"name": "resource",
@@ -43,6 +43,6 @@ export class ApisetuGovEdistrictodishasp implements INodeType {
 			"default": ""
 		},
 		...apIsDescription
-		],
-	};
+                ],
+        };
 }
